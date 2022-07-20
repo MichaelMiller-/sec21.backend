@@ -54,8 +54,8 @@ export class LoadCase {
    })
    type: LoadType
 
-   @ManyToOne(type => StructuralCurveAction, e => e.id)
-   structuralCurveAction: StructuralCurveAction;
+   // @ManyToOne(type => StructuralCurveAction, e => e.id)
+   // structuralCurveAction: StructuralCurveAction;
 
    @ManyToOne(type => Project, project => project.loadCases)
    project: Project;
