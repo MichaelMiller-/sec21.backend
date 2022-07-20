@@ -1,29 +1,30 @@
 import { Entity, PrimaryGeneratedColumn, Column, Generated, JoinColumn, OneToOne } from "typeorm";
 import { StructuralPoint } from "./StructuralPoint";
 
+// todo: remove
 export enum SupportType {
-   FIXED = "fixed",
-   HINGED = "hinged",
-   SLIDING = "sliding",
-   CUSTOM = "custom"
+   FIXED = "Fixed",
+   HINGED = "Hinged",
+   SLIDING = "Sliding",
+   CUSTOM = "Custom"
 }
 
 export enum SupportTranslation {
-   RIGID = "rigid",
-   FREE = "free",
-   FLEXIBLE = "flexible",
-   COMPRESSION_ONLY = "compression_only",
-   TENSION__ONLY = "tension_only",
+   RIGID = "Rigid",
+   FREE = "Free",
+   FLEXIBLE = "Flexible",
+   COMPRESSION_ONLY = "CompressionOnly",
+   TENSION__ONLY = "TensionOnly",
    //  "Flexible compression only",
    // "Flexible tension only",
-   NON_LINEAR = "non_linear"
+   NON_LINEAR = "NonLinear"
 }
 
 export enum SupportRotationalStiffness {
-   FREE = "free",
-   RIGID = "rigid",
-   FLEXIBLE = "flexible",
-   NON_LINEAR = "non_linear"
+   FREE = "Free",
+   RIGID = "Rigid",
+   FLEXIBLE = "Flexible",
+   NON_LINEAR = "NonLinear"
 }
 
 @Entity()
@@ -43,6 +44,7 @@ export class PointSupport {
    @JoinColumn()
    referencePoint: StructuralPoint;
 
+   // todo: remove
    @Column({
       type: "enum",
       enum: SupportType,
