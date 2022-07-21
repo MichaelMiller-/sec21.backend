@@ -28,6 +28,7 @@ import {deleteProject} from "./controller/DeleteProject";
 import {addSurfaceMember} from "./controller/AddSurfaceMember";
 import {listStructuralCurveAction} from "./controller/ListStructuralCurveAction";
 import {addStructuralCurveAction} from "./controller/AddStructuralCurveAction";
+import {deleteLoadCase} from "./controller/DeleteLoadCase";
 
 export const appRoutes = [
     {
@@ -164,6 +165,11 @@ export const appRoutes = [
         path: "/pointaction/:id",
         method: "delete",
         action: deletePointAction
+    },
+    {
+        path: "/loadcase/:id",
+        method: "delete",
+        action: deleteLoadCase
     },
     {
         path: "/project/:id",
